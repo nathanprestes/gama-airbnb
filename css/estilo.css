@@ -5,7 +5,7 @@ body {
 }
 
 .main-container{
-    background-color: #f8f8ff;
+    background-color: #ececec;
 }
 
 .wrapper {
@@ -18,18 +18,18 @@ body {
    =================== */
 
 .header-container {
-    border-bottom: 20px solid #dddddd;
+    /* border-bottom: 20px solid #dddddd; */
 }
 
 .footer-container,
 .main aside {
-    border-top: 20px solid #FF385C;
+    /* border-top: 20px solid #38b0ff; */
 }
 
 .header-container,
 .footer-container,
 .main aside {
-    background: #FF385C;
+    background: #38b0ff;
 }
 
 .title{
@@ -66,14 +66,14 @@ nav a {
     font-size: .9em;
     text-transform: uppercase;
 
-    color: #E31C5F;
-    /* background-image: radial-gradient(circle at center, #FF385C 0%, #E61E4D 27.5%, #E31C5F 40%, #D70466 57.5%, #BD1E59 75%, #BD1E59 100% ) !important; */
+    color: #4b9cd2;
+    /* background-image: radial-gradient(circle at center, #38b0ff 0%, #E61E4D 27.5%, #4b9cd2 40%, #D70466 57.5%, #BD1E59 75%, #BD1E59 100% ) !important; */
     background: #ffffff;
 }
 
 nav a:hover, 
 nav a.active {
-    background: #E31C5F;
+    background: #4b9cd2;
     color: #ffffff;
     text-decoration: none;
 }
@@ -93,8 +93,7 @@ nav a.active {
 
 .main aside {
     color: white;
-
-    border-radius: 5px;
+    border-radius: 3px;
     padding: 0px 5% 10px;
 }
 
@@ -107,6 +106,14 @@ nav a.active {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.footer-container .wrapper h5{
+    margin: 7px 0;
+}
+
+.footer-container .wrapper a, .footer-container .wrapper img{
+    display: block;
 }
 
 .footer-container .find-me {
@@ -145,9 +152,9 @@ nav a.active {
     z-index: 2;
 }
 .banner .lead {
-    background: #FF385C70;
+    background: #38b0ff70;
 
-    border: 1px solid #FF385C;
+    border: 1px solid #38b0ff;
     border-radius: 5px;
     display: block;
     padding: 20px;
@@ -155,19 +162,96 @@ nav a.active {
     position: relative;
 }
 
+/* ==============
+    Filter
+   ============== */
+
+   #filter {display: block;width: 100%;clear: both;padding: 20px;box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;}
+   #filter div.wrap_filter {padding: 20px;position: relative;/* display: flex; */flex-direction: row;flex-wrap: nowrap;justify-content: space-between;align-items: center;align-content: center;border: solid 1px #ccc;background: #ffffff;/* width: 100%; */box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;border-radius: 4px;-moz-border-radius: 4px;-webkit-border-radius: 4px;margin: 0 -10px;}
+   #filter div.wrap_filter > div{
+    /* display: inline-block; */
+    flex: auto;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 10px 10px;
+    /* width: 90px; */
+    -webkit-transition: .36s ease-out;
+    -moz-transition: .36s ease-out;
+    transition: .36s ease-out;
+    -o-transition: .36s ease-out;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+    #filter div.wrap_filter > div:hover, #filter div.wrap_filter > div:focus{background: #cccccc42;}
+    #filter div.wrap_filter > div label{
+    display: inline-block;
+    width: 100%;
+}
+    #filter div.wrap_filter > div label.checkin, #filter div.wrap_filter > div label.checkout{width: 49%;}
+    #filter div.wrap_filter div.location {  }
+     #filter div.wrap_filter div.location label {/* width: 49%; */}
+      #filter div.wrap_filter div label p {margin: 0 0 10px;text-transform: uppercase;color: #000;font-weight: 600;font-size: 13px;line-height: normal;}
+      #filter div.wrap_filter div label input,#filter div.wrap_filter div label select{
+    width: 100%;
+    border: solid 1px #ececec;
+    background: transparent;
+    padding: 10px;
+    cursor: pointer;
+    outline: none;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+    #filter div.wrap_filter div label select{
+    height: 42px;
+}
+      #country {  }
+       #country option {  }
+     #filter div.wrap_filter div.location label.checkin {/* width: 50%; */}
+      #filter div.wrap_filter div.location label.checkin p {  }
+      #checkin {  }
+      #filter div.wrap_filter div.location label.checkin label.checkout {  }
+       #filter div.wrap_filter div.location label.checkin label.checkout p {  }
+       #checkout {  }
+      #filter div.wrap_filter div.location label.checkin div.guests {  }
+       #filter div.wrap_filter div.location label.checkin div.guests label.checkin {  }
+        #filter div.wrap_filter div.location label.checkin div.guests label.checkin p {  }
+        #guests {  }
+       #filter div.wrap_filter div.action {width: 120px;flex: initial;}
+        #search {border: dashed 1px #CCC;background: #FFF;border-radius: 4px;-moz-border-radius: 4px;-webkit-border-radius: 4px;cursor: pointer;width: 100%;padding: 12px;}
+         #search span.material-icons {display: inline-block;vertical-align: middle;}
+
+
+/* ==============
+    Box Card
+   ============== */
+
 .residence section.card {
     background-color: #ffffff;
     border: 1px solid #eeeeee;
     border-radius: 5px;
     -webkit-box-shadow: 2px 2px 10px 5px #eee;
-       -moz-box-shadow: 2px 2px 10px 5px #eee;
-            box-shadow: 2px 2px 10px 5px #eee;
+    -moz-box-shadow: 2px 2px 10px 5px #eee;
+    box-shadow: 2px 2px 10px 5px #eee;
     margin-bottom: 30px;
     padding-bottom: 30px;
     position: relative;
     padding: 20px;
     overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
+
+.residence section.card > div{max-width:50%;}
 
 .residence iframe {
     max-width: 100%;
@@ -181,11 +265,15 @@ nav a.active {
 .residence .img-residence{
     max-width: 560px;
     overflow: hidden;
+    width: 50%;
+    display: inline-block;
 }
 
 .residence .img-residence img{
-    min-height: 100%;
+    /* min-height: 100%; */
     width: 100%;
+    height: auto;
+    display: block;
 }
 
 .residence h3,
@@ -193,10 +281,27 @@ nav a.active {
 .residence h3 a:visited{
     color: #333333;
     text-decoration: none;
+    margin-top: 0px;
+    font-size: 14px;
+    text-transform: uppercase;
+    width: 100%;
+    /* flex: 1; */
+    height: 52px;
 }
 .residence h3:hover,
 .residence h3 a:hover{
-    color: #FF385C;
+    color: #38b0ff;
+}
+
+.residence .wrap_info{
+    padding: 0 0 0 10px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.residence .wrap_info p{
+    width: 100%;
+    margin-top: 0px;
 }
 
 .residence .preco{
@@ -205,21 +310,39 @@ nav a.active {
     font-weight: 700;
     text-align: center;
     text-decoration: none;
-
-    background-color: #FF385C;
+    background-color: #38b0ff;
     border: 1px solid;
     display: block;
-    padding: 2px;
-    width: 100px;
-    height: 30px;
-    position: absolute;
-    bottom: 30px;
-    right: 20px;
+    padding: 5px 10px;
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 
 .residence .preco:hover{
     background-color: #333333;
     color: #ffffff;
+}
+
+#loadMore{
+    color: #ffffff;
+    line-height: 30px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    background-color: #000;
+    display: block;
+    padding: 5px 2px;
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    clear: both;
 }
 
 
@@ -237,6 +360,7 @@ nav a.active {
     height: 95vh;
     position: sticky !important;
     top: 0px;
+    display: none;
 }
 
 /* ==============
@@ -336,17 +460,21 @@ aside.me .find-me a:hover img{
     TABLET
     ==================== */
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 320px) {
 
 /* ====================
     Menu
    ==================== */
 
     nav a {
-        margin-top: 15px;
-        margin-bottom: 0;
+        margin: 9px 0;
+        /* margin-bottom: 0; */
         padding: 15px 2%;
         min-width: 100px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        display: block;
     }
 
     nav li:first-child a {
@@ -357,45 +485,8 @@ aside.me .find-me a:hover img{
         margin-right: 0;
     }
 
-    .banner {
-        height: 250px;
-    }
-
-    .banner img {
-        position: absolute;
-        top: -190%;
-    }
-
-    .banner.sobre img {
-        top: -35%;
-    }
-
-    .banner.contato img {
-        top: -10%;
-    }
-
-    .banner.saiba-mais img {
-        top: -20%;
-    }
-
-    .banner .lead {
-        background: #FF385C70;
-
-        border: 0px;
-        border-radius: 0px;
-        display: block;
-        padding: 20px;
-        margin-top: 0;
-        height: 210px;
-    }
-
-    .banner .wrapper{
-        margin: 0;
-        width: 100%;
-    }
-
     .residence .img-residence{
-        height: 333px;
+        /* height: 333px; */
     }
 
 }
@@ -412,8 +503,8 @@ aside.me .find-me a:hover img{
     .header-container,
     .main aside {
         -webkit-box-shadow: 2px 2px 10px 5px #eee;
-           -moz-box-shadow: 2px 2px 10px 5px #eee;
-                box-shadow: 2px 2px 10px 5px #eee;
+        -moz-box-shadow: 2px 2px 10px 5px #eee;
+        box-shadow: 2px 2px 10px 5px #eee;
     }
 
 /* ============
@@ -453,18 +544,32 @@ aside.me .find-me a:hover img{
         float: left;
         width: 20%;
     }
+
+    #filter div.wrap_filter{display: flex;}
+
+    #map{display:block;}
 }
 
 
 /* ===============
     WIDE - TELAS GRANDES
    =============== */
-@media only screen and (min-width: 1140px) {
+@media only screen and (min-width: 1920px) {
 
     /* .wrapper {
         width: 1026px; 
         margin: 0 auto;
     } */
+
+    .residence > .container{margin:0 -15px;}
+    .residence section.card{
+    width: calc(50% - 30px);
+    float: left;
+    margin: 0 15px 30px 15px;
+}
+    .residence section.card .img-residence{
+    height: 142px;
+}
 }
 
 /* ===============

@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta name="description" content="Gama Academy - Airbnb Simulator">
-    <meta name="author" content="Marcílio Reis">
+    <meta name="description" content="Gama Academy 9 - Airbnb">
+    <meta name="author" content="Nathan Prestes">
 
-    <title>Gama Academy - Airbnb Simulator</title>
+    <title>Gama Academy - Nathan Prestes - Airbnb</title>
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/estilo.css">
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- https://material.io/resources/icons/?icon=accessibility_new&style=baseline -->
 </head>
 <body>
-
     <div class="header-container">
         <header class="wrapper clearfix">
             <h1 class="title">
@@ -27,30 +27,50 @@
             </h1>
             <nav>
                 <ul>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                    <li><a href="saiba-mais.html">Saiba Mais</a></li>
+                    <li><a href="https://github.com/nathanprestes/" target="_blank">Sobre</a></li>
+                    <li><a href="https://www.linkedin.com/in/nathanprestes/" target="_blank">Contato</a></li>
                 </ul>
             </nav>
         </header>
     </div>
 
     <div class="main-container">
-
-        <section class="banner">
-            <img src="https://images.unsplash.com/photo-1467987506553-8f3916508521?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2500&q=80" alt="">
-            <div class="wrapper clearfix">
-                <div class="lead">
-                    <h1>Acomodações em Copenhague</h1>
-                    <p><strong>Verifique as restrições de viagem antes de fazer uma reserva.</strong><br>
-                        A saúde e a segurança das nossas comunidades vêm sempre em primeiro lugar. <br>
-                        Siga as orientações do governo e viaje apenas se for essencial.</p>
+        <section id="filter">
+            <div class="wrap_filter">
+                <div class="location">
+                    <label>
+                        <p>País</p>
+                        <select id="country">
+                            <option value="">All</option>
+                            <option value="United States">United States</option>
+                            <option value="Spain">Spain</option>
+                            <option value="Italy">Italy</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="check">
+                    <label class="checkin">
+                        <p>Check-in</p>
+                        <input type="date" id="checkin" name="checkin" max="2025-01-01" />
+                    </label>
+                    <label class="checkout">
+                        <p>Checkout</p>
+                        <input type="date" id="checkout" name="checkout" max="2025-01-01" />
+                    </label>
+                </div>
+                <div class="guests">
+                    <label>
+                        <p>Hóspedes</p>
+                        <input type="number" id="guests" name="guests" min="1" max="5" value="1" />
+                    </label>
+                </div>
+                <div class="action">
+                    <button id="search"><span class="material-icons">search</span> Buscar</button>
                 </div>
             </div>
         </section>
 
         <div class="main wrapper clearfix">
-
             <article id="residence" class="residence"></article>
 
             <aside id="map"></aside>
@@ -59,22 +79,25 @@
 
     <div class="footer-container">
         <footer class="wrapper">
-            <h5>2020 ɔ - Marcílio Reis </h5>
+            <h5>Nathan Prestes - Desenvolvido para desafios :D</h5>
             <div class="find-me">
                 <div class="github">
-                    <a href="https://github.com/marcilioreis/" target="_blank">
+                    <a href="https://github.com/nathanprestes/" target="_blank">
                         <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBpZD0iQm9sZCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjQgMjQiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjUxMnB4Ij48cGF0aCBkPSJtMTIgLjVjLTYuNjMgMC0xMiA1LjI4LTEyIDExLjc5MiAwIDUuMjExIDMuNDM4IDkuNjMgOC4yMDUgMTEuMTg4LjYuMTExLjgyLS4yNTQuODItLjU2NyAwLS4yOC0uMDEtMS4wMjItLjAxNS0yLjAwNS0zLjMzOC43MTEtNC4wNDItMS41ODItNC4wNDItMS41ODItLjU0Ni0xLjM2MS0xLjMzNS0xLjcyNS0xLjMzNS0xLjcyNS0xLjA4Ny0uNzMxLjA4NC0uNzE2LjA4NC0uNzE2IDEuMjA1LjA4MiAxLjgzOCAxLjIxNSAxLjgzOCAxLjIxNSAxLjA3IDEuODAzIDIuODA5IDEuMjgyIDMuNDk1Ljk4MS4xMDgtLjc2My40MTctMS4yODIuNzYtMS41NzctMi42NjUtLjI5NS01LjQ2Ni0xLjMwOS01LjQ2Ni01LjgyNyAwLTEuMjg3LjQ2NS0yLjMzOSAxLjIzNS0zLjE2NC0uMTM1LS4yOTgtLjU0LTEuNDk3LjEwNS0zLjEyMSAwIDAgMS4wMDUtLjMxNiAzLjMgMS4yMDkuOTYtLjI2MiAxLjk4LS4zOTIgMy0uMzk4IDEuMDIuMDA2IDIuMDQuMTM2IDMgLjM5OCAyLjI4LTEuNTI1IDMuMjg1LTEuMjA5IDMuMjg1LTEuMjA5LjY0NSAxLjYyNC4yNCAyLjgyMy4xMiAzLjEyMS43NjUuODI1IDEuMjMgMS44NzcgMS4yMyAzLjE2NCAwIDQuNTMtMi44MDUgNS41MjctNS40NzUgNS44MTcuNDIuMzU0LjgxIDEuMDc3LjgxIDIuMTgyIDAgMS41NzgtLjAxNSAyLjg0Ni0uMDE1IDMuMjI5IDAgLjMwOS4yMS42NzguODI1LjU2IDQuODAxLTEuNTQ4IDguMjM2LTUuOTcgOC4yMzYtMTEuMTczIDAtNi41MTItNS4zNzMtMTEuNzkyLTEyLTExLjc5MnoiIGZpbGw9IiMwMDAwMDAiLz48L3N2Zz4K" />
                     </a>
                 </div>
                 <div class="linkedin">
-                    <a href="https://www.linkedin.com/in/marcilio-reis-97a5546a/" target="_blank">
+                    <a href="https://www.linkedin.com/in/nathanprestes/" target="_blank">
                         <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBoZWlnaHQ9IjUxMnB4IiB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgd2lkdGg9IjUxMnB4Ij48cGF0aCBkPSJtMjU2IDBjLTE0MS4zNjMyODEgMC0yNTYgMTE0LjYzNjcxOS0yNTYgMjU2czExNC42MzY3MTkgMjU2IDI1NiAyNTYgMjU2LTExNC42MzY3MTkgMjU2LTI1Ni0xMTQuNjM2NzE5LTI1Ni0yNTYtMjU2em0tNzQuMzkwNjI1IDM4N2gtNjIuMzQ3NjU2di0xODcuNTc0MjE5aDYyLjM0NzY1NnptLTMxLjE3MTg3NS0yMTMuMTg3NWgtLjQwNjI1Yy0yMC45MjE4NzUgMC0zNC40NTMxMjUtMTQuNDAyMzQ0LTM0LjQ1MzEyNS0zMi40MDIzNDQgMC0xOC40MDYyNSAxMy45NDUzMTMtMzIuNDEwMTU2IDM1LjI3MzQzNy0zMi40MTAxNTYgMjEuMzI4MTI2IDAgMzQuNDUzMTI2IDE0LjAwMzkwNiAzNC44NTkzNzYgMzIuNDEwMTU2IDAgMTgtMTMuNTMxMjUgMzIuNDAyMzQ0LTM1LjI3MzQzOCAzMi40MDIzNDR6bTI1NS45ODQzNzUgMjEzLjE4NzVoLTYyLjMzOTg0NHYtMTAwLjM0NzY1NmMwLTI1LjIxODc1LTkuMDI3MzQzLTQyLjQxNzk2OS0zMS41ODU5MzctNDIuNDE3OTY5LTE3LjIyMjY1NiAwLTI3LjQ4MDQ2OSAxMS42MDE1NjMtMzEuOTg4MjgyIDIyLjgwMDc4MS0xLjY0ODQzNyA0LjAwNzgxMy0yLjA1MDc4MSA5LjYwOTM3NS0yLjA1MDc4MSAxNS4yMTQ4NDR2MTA0Ljc1aC02Mi4zNDM3NXMuODE2NDA3LTE2OS45NzY1NjIgMC0xODcuNTc0MjE5aDYyLjM0Mzc1djI2LjU1ODU5NGM4LjI4NTE1Ny0xMi43ODEyNSAyMy4xMDkzNzUtMzAuOTYwOTM3IDU2LjE4NzUtMzAuOTYwOTM3IDQxLjAxOTUzMSAwIDcxLjc3NzM0NCAyNi44MDg1OTMgNzEuNzc3MzQ0IDg0LjQyMTg3NHptMCAwIiBmaWxsPSIjMDAwMDAwIi8+PC9zdmc+Cg==" />
                     </a>
                 </div>
             </div>
         </footer>
     </div>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDThCIRNPf8Rh5GFo1DVZ8ppwHN6Z5xvCk&callback=initMap" async defer></script>
+    <!-- https://console.cloud.google.com/apis/credentials?project=gama-projeto -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQCCvyHl4E31STbpmHjU-KMfPaMwxTKb4&callback=initMap" async defer></script>
+    <!-- http://vanilla-js.com/ -->
     <script src="js/scripts.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>
